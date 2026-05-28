@@ -1,7 +1,9 @@
+import {Link} from "react-router-dom"
+import bgImg from "../assets/images/about-hero.png"
 export default function About(){
     return(
         <main className="about-page-container">
-            <div className="about-hero-image"></div>
+            <img src={bgImg} className="about-hero-image" />
             <section className="about-page-content">
                 <h1>
                     Don’t squeeze in a sedan when you could relax in a van.
@@ -22,7 +24,7 @@ export default function About(){
                         <br />
                         Your van is ready.
                     </h2>
-                    <button>Explore our vans</button>
+                    <Link to="/vans" className="about-link-btn">Explore our vans</Link>
                 </div>
             </section>
         </main>

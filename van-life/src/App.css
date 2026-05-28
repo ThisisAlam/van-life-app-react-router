@@ -83,16 +83,32 @@ nav a:first-child {
     font-weight: 700;
 
     cursor: pointer;
+    transition: transform .1s ease-in-out;
 }
 /* =========================
    ABOUT PAGE
 ========================= */
-
+.about-link-btn {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    padding: .75rem 1.375rem;
+    color: initial;
+    font-weight: 700;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #161616;
+    color: white;
+    border-radius: 10px;
+    transition: transform .1s ease-in-out;
+}
+.about-link-btn:hover, .link-btn:hover {
+    transform: translate(1px, 1px);
+}
 .about-hero-image {
 
     /* ADD YOUR IMAGE HERE */
-    background-image: url("./assets/images/about-hero.png");
-
     height: 300px;
     background-size: cover;
     background-position: center;

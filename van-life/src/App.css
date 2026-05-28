@@ -1,0 +1,154 @@
+/* =========================
+   NAVBAR
+========================= */
+nav > a {
+    text-decoration: none;
+    color: inherit;
+}
+
+nav {
+    height: 90px;
+    display: flex;
+    align-items: center;
+    padding: 0 26px;
+    background-color: #FFF7ED;
+}
+
+nav a {
+    font-weight: 600;
+    color: #4D4D4D;
+    margin-left: 25px;
+}
+
+nav a:first-child {
+    margin-right: auto;
+    margin-left: 0;
+    font-size: 1.6rem;
+    font-weight: 900;
+    color: #000000;
+}
+/* =========================
+   HOME PAGE
+========================= */
+
+.hero {
+    min-height: calc(100vh - 90px);
+
+    /* ADD YOUR IMAGE HERE */
+    background-image: url("https://images.seattletimes.com/wp-content/uploads/2023/08/08152023_van_101700.jpg?d=780x519");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    padding: 26px;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    line-height: 1.1;
+    margin-bottom: 24px;
+    max-width: 520px;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 520px;
+    margin-bottom: 32px;
+}
+
+.hero button {
+    width: 100%;
+    max-width: 520px;
+    height: 50px;
+
+    border: none;
+    border-radius: 6px;
+
+    background-color: #FF8C38;
+    color: white;
+
+    font-size: 1rem;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+/* =========================
+   ABOUT PAGE
+========================= */
+
+.about-hero-image {
+
+    /* ADD YOUR IMAGE HERE */
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3vjczR08IOJkqOCgTBOrUA4PfsJacwKWzYw&s");
+
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+}
+
+.about-page-content {
+    padding: 48px 26px;
+}
+
+.about-page-content h1 {
+    font-size: 2.4rem;
+    line-height: 1.2;
+    margin-bottom: 32px;
+}
+
+.about-page-content p {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 24px;
+    color: #161616;
+}
+
+.about-page-cta {
+    background-color: #FFCC8D;
+    padding: 32px;
+    border-radius: 8px;
+    margin-top: 48px;
+}
+
+.about-page-cta h2 {
+    font-size: 2rem;
+    line-height: 1.3;
+    margin-top: 0;
+    margin-bottom: 24px;
+}
+
+.about-page-cta button {
+    border: none;
+    background-color: #161616;
+    color: white;
+
+    padding: 14px 26px;
+    border-radius: 8px;
+
+    font-size: 1rem;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    height: 74px;
+    background-color: #252525;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #AAAAAA;
+    font-size: 0.9rem;
+}

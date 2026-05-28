@@ -173,3 +173,44 @@ footer {
     color: #AAAAAA;
     font-size: 0.9rem;
 }
+/* =========================
+   VANS
+========================= */
+.van-page-container{
+    padding: 2rem;
+}
+.van-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 34px 24px;
+}
+
+.van-tile img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.van-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.van-price span {
+    display: block;
+    font-size: 0.8rem;
+}
+
+.van-type {
+    padding: 6px 14px;
+    border-radius: 5px;
+    color: white;
+}
+
+.van-type.simple {
+    background-color: #E17654;
+}
+
+.van-type.rugged {
+    background-color: #115E59;
+}

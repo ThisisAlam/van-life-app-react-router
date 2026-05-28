@@ -35,7 +35,7 @@ nav a:first-child {
     min-height: calc(100vh - 90px);
 
     /* ADD YOUR IMAGE HERE */
-    background-image: url("https://images.seattletimes.com/wp-content/uploads/2023/08/08152023_van_101700.jpg?d=780x519");
+    background-image: url("./assets/images/home-hero.png");
 
     background-size: cover;
     background-position: center;
@@ -63,7 +63,12 @@ nav a:first-child {
     margin-bottom: 32px;
 }
 
-.hero button {
+.link-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+
     width: 100%;
     max-width: 520px;
     height: 50px;
@@ -86,7 +91,7 @@ nav a:first-child {
 .about-hero-image {
 
     /* ADD YOUR IMAGE HERE */
-    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3vjczR08IOJkqOCgTBOrUA4PfsJacwKWzYw&s");
+    background-image: url("./assets/images/about-hero.png");
 
     height: 300px;
     background-size: cover;

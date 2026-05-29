@@ -14,15 +14,7 @@ export default function Header() {
             <Link to="/">#VANLIFE</Link>
             
             <nav>
-                <NavLink
-                    to="/"
-                    style={({ isActive }) =>
-                        isActive ? activeStyles : null
-                    }
-                    end
-                >
-                    Home
-                </NavLink>
+                
 
                 <NavLink
                     to="/host"
@@ -50,6 +42,12 @@ export default function Header() {
                 >
                     Vans
                 </NavLink>
+                <Link to="login" className="login-link">
+                    <img 
+                        src={imageUrl}
+                        className="login-icon"
+                    />
+                </Link>
             </nav>
         </header>
     )

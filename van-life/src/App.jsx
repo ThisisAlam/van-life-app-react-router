@@ -13,6 +13,7 @@ import Home from "./homeComponents/Home.jsx"
 import About from "./homeComponents/About.jsx"
 import Vans from "./homeComponents/Vans.jsx"
 import VanDetail from "./homeComponents/VanDetail.jsx"
+import NotFound from "./homeComponents/NotFound.jsx"
 
 import HostLayout from "./hostComponents/HostLayout.jsx"
 import Dashboard from "./hostComponents/Dashboard.jsx"
@@ -33,12 +34,14 @@ export default function App(){
     <Routes>
 
     <Route element={<HomeLayout />}>
+        
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/vans" element={<Vans />} />
         <Route path="/vans/:id" element={<VanDetail />} />
         
         <Route path="/host" element={<HostLayout />}>
+        
             <Route index element={<Dashboard />} />
             <Route path="/host/income" element={<Income />} />
             <Route path="/host/reviews" element={<Reviews />} />
@@ -49,7 +52,10 @@ export default function App(){
                 <Route path="/host/vans/:id/pricing" element={<Pricing />} />
                 <Route path="/host/vans/:id/photos" element={<Photos />} />
             </Route>
+        
         </Route>
+
+        <Route path="*" element={<NotFound />} />
     </Route>
         
     </Routes>

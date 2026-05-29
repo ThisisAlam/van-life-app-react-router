@@ -1,9 +1,9 @@
 import React from "react"
-import {Link, useParams} from "react-router-dom"
+import {Link, useParams, useLocation} from "react-router-dom"
 
 export default function VanDetail(){
     const params = useParams();
-    
+    const location = useLocation();
     console.log(params)
     
     const [vansData, setVansData] = React.useState(null)
@@ -21,8 +21,10 @@ export default function VanDetail(){
     if (!vansData) { return <h1>No van found</h1> }
     return (
         <div className="van-detail-page">
-            <Link to="/vans" className="van-detail-back-btn">
-                &larr; <span>Back to all vans</span>
+            <Link to={`..?${location.state?.search || ""}`}
+                relative="path"
+                className="van-detail-back-btn">
+                &larr; <span>Back to {location.state?.type || "all"} vans</span>
             </Link>
             <div key={vansData.id} className="van-detail-card">
                 <img src={vansData.imageUrl} alt={`Image of ${vansData.name}`} />

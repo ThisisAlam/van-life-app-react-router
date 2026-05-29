@@ -33,7 +33,8 @@ export default function HostVanDetail(){
 
     return (
         <section className="host-van-detail-page">
-            <Link to="/host/vans"
+            <Link to=".."
+                relative="path"
                 className="host-van-detail-back-btn"
             >&larr; <span>Back to all vans</span>
             </Link>

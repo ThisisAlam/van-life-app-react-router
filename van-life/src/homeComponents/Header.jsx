@@ -49,7 +49,7 @@ export default function Header() {
                         className="login-icon"
                     />
                 </Link>
-                <button onClick={fakeLogOut}>X</button>
+                <button onClick={fakeLogOut}>Sign out</button>
             </nav>
         </header>
     )

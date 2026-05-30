@@ -25,3 +25,4 @@ dist-ssr
 
 # Ignoring the .env
 .env
+firebase.js

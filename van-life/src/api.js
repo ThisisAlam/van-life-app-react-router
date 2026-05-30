@@ -10,7 +10,7 @@ import {
     query,
     where
 } from "firebase/firestore/lite"
-
+import firebaseConfig from ".env"
 // Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyD_LYt8ftpS-B_BxOytNK0EQgItN_8T0j8",

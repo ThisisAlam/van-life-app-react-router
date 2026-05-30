@@ -13,7 +13,9 @@ import Home from "./homeComponents/Home.jsx"
 import About from "./homeComponents/About.jsx"
 import Vans from "./homeComponents/Vans.jsx"
 import VanDetail from "./homeComponents/VanDetail.jsx"
-import NotFound from "./homeComponents/NotFound.jsx"
+import Error from "./homeComponents/Error.jsx"
+import Login from "./homeComponents/Login.jsx"
+
 
 import HostLayout from "./hostComponents/HostLayout.jsx"
 import Dashboard from "./hostComponents/Dashboard.jsx"
@@ -24,6 +26,9 @@ import HostVanDetail from "./hostComponents/HostVanDetail.jsx"
 import Details from "./hostComponents/Details.jsx"
 import Pricing from "./hostComponents/Pricing.jsx"
 import Photos from "./hostComponents/Photos.jsx"
+
+import AuthRequired from "./AuthRequired.jsx"
+import NotFound from "./NotFound.jsx"
 
 export default function App(){
     
@@ -37,22 +42,25 @@ export default function App(){
         
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="login" element={<Login />} />
         <Route path="/vans" element={<Vans />} />
-        <Route path="/vans/:id" element={<VanDetail />} />
-        
-        <Route path="/host" element={<HostLayout />}>
-        
-            <Route index element={<Dashboard />} />
-            <Route path="/host/income" element={<Income />} />
-            <Route path="/host/reviews" element={<Reviews />} />
-            <Route path="/host/vans" element={<HostVans />} />
-            
-            <Route path="/host/vans/:id" element={<HostVanDetail />}>
-                <Route index element={<Details />} />
-                <Route path="/host/vans/:id/pricing" element={<Pricing />} />
-                <Route path="/host/vans/:id/photos" element={<Photos />} />
+        <Route path="/vans/:id" 
+            element={<VanDetail />}
+            errorElement={<Error />}
+        />
+        <Route element={<AuthRequired />}>
+            <Route path="/host" element={<HostLayout />}>
+                <Route index element={<Dashboard />} />
+                <Route path="/host/income" element={<Income />} />
+                <Route path="/host/reviews" element={<Reviews />} />
+                <Route path="/host/vans" element={<HostVans />} />
+                
+                <Route path="/host/vans/:id" element={<HostVanDetail />}>
+                    <Route index element={<Details />} />
+                    <Route path="/host/vans/:id/pricing" element={<Pricing />} />
+                    <Route path="/host/vans/:id/photos" element={<Photos />} />
+                </Route>
             </Route>
-        
         </Route>
 
         <Route path="*" element={<NotFound />} />
@@ -64,3 +72,5 @@ export default function App(){
     </>
     )
 }
+
+// loader={vansLoader} 

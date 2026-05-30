@@ -13,7 +13,7 @@ export default function Vans(){
             setLoading(true)
             try {
                 const data = await getVans()
-                setVans(data)
+                setVansData(data)
             } catch (err) {
                 setError(err)
             } finally {
